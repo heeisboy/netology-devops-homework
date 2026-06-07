@@ -1,5 +1,5 @@
 ---
-- name: Install tuned demon
+- name: Install tuned demon and start the service
   hosts: my
   become: yes
 
