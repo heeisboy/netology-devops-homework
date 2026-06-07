@@ -37,17 +37,28 @@
 
 **Решение:**
 
-1. Плейбук скачивает архив, создает папку и распаковывает его в созданную папку. Запускаем комадой  ```ansible-playbook -i  inventory.ini playbook-archive.yml --vault-password-file .env```
+1. Плейбук скачивает архив, создает папку и распаковывает его в созданную папку. Запускаем комадой  `ansible-playbook -i  inventory.ini playbook-archive.yml --vault-password-file .env`
 <img width="1221" height="701" alt="изображение" src="https://github.com/user-attachments/assets/16690d0e-daeb-4cb0-bbbe-e5e3f9adf1e4" />
 
 **Код плейбука:** <a href="https://github.com/heeisboy/netology-devops-homework/blob/main/ansible-hw-2/playbook-archive.yml">playbook-archive.yml</a>
 
-2. Плейбук устанавливает пакет tuned, запускает его как демон и добавляет в автозагрузку. Запускаем командой ```ansible-playbook -i inventory.ini  playbook-archive.yml --vault-password-file .env```
+2. Плейбук устанавливает пакет tuned, запускает его как демон и добавляет в автозагрузку. Запускаем командой `ansible-playbook -i inventory.ini  playbook-archive.yml --vault-password-file .env`
 <img width="1252" height="599" alt="изображение" src="https://github.com/user-attachments/assets/08544953-d67d-4bf7-8673-110918990a69" />
 
 **Код плейбука:** <a href="https://github.com/heeisboy/netology-devops-homework/blob/main/ansible-hw-2/playbook-tuned-demon.yml">playbook-tuned-demon.yml</a>
 
-3. Плейбук изменяет приветствие системы (motd) при входе на "..."
+3. Плейбук изменяет приветствие системы (motd) при входе на:
+```
+"Hello, netology! Have a nice session!
+Current time: <time>
+Date: <date>"
+```
+Запускаем командой `ansible-playbook -i inventory.ini playbook-edit-motd.yml --vault-password-file .env`
+
+<img width="1247" height="778" alt="изображение" src="https://github.com/user-attachments/assets/d882605e-1e4b-4d70-ab51-8edb6ab75d68" />
+
+**Код плейбука:** <a href="https://github.com/heeisboy/netology-devops-homework/blob/main/ansible-hw-2/playbook-edit-motd.yml">playbook-edit-motd.yml</a>
+
 
 ---
 
