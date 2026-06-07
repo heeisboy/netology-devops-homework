@@ -1,0 +1,69 @@
+---
+
+- name: Install Apache web server
+  package:
+    name: "{{ apache_package }}"
+    state: present
+  notify: restart apache
+
+
+- name: Copy Apache configuration file
+  template:
+    src: apache.conf.j2
+    dest: "{{ apache_config_path }}"
+    owner: root
+    group: root
+    mode: '0644'
+    backup: yes
+  notify: restart apache
+  when: configure_apache | default(false)
+
+
+- name: Ensure web document root exists
+  file:
+    path: "{{ apache_document_root }}"
+    state: directory
+    owner: "{{ apache_user }}"
+    group: "{{ apache_group }}"
+    mode: '0755'
+
+- name: Create index.html with system information
+  template:
+    src: index.html.j2
+    dest: "{{ apache_document_root }}/index.html"
+    owner: "{{ apache_user }}"
+    group: "{{ apache_group }}"
+    mode: '0644'
+
+
+- name: Open port 80 in ufw
+  ufw:
+    rule: allow
+    port: 80
+    proto: tcp
+  when: ansible_facts['os_family'] == 'Debian'
+
+
+- name: Start and enable Apache service
+  service:
+    name: "{{ apache_service }}"
+    state: started
+    enabled:  yes
+
+
+- name: Check if website is accessible
+  uri:
+    url: "http://{{ ansible_default_ipv4.address }}"
+    status_code: 200
+    return_content: yes
+  register: webpage_check
+  until: webpage_check.status == 200
+  retries: 5
+  delay: 3
+
+
+- name: Display website check result
+  debug:
+    msg:
+      - "Website is accessible and returned status code {{ webpage_check.status }}"
+      - "Content length: {{ webpage_check.content | length }} bytes"

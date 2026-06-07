@@ -1,0 +1,9 @@
+---
+# Переменные по умолчанию
+apache_package: "{{ 'httpd' if ansible_os_family == 'RedHat' else 'apache2' }}"
+apache_service: "{{ 'httpd' if ansible_os_family == 'RedHat' else 'apache2' }}"
+apache_user: "{{ 'apache' if ansible_os_family == 'RedHat' else 'www-data' }}"
+apache_group: "{{ 'apache' if ansible_os_family == 'RedHat' else 'www-data' }}"
+apache_document_root: "{{ '/var/www/html' if ansible_os_family == 'RedHat' else '/var/www/html' }}"
+apache_config_path: "{{ '/etc/httpd/conf/httpd.conf' if ansible_os_family == 'RedHat' else '/etc/apache2/apache2.conf' }}"
+configure_apache: false

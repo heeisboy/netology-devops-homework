@@ -1,0 +1,13 @@
+---
+- name: Install and configure Apache web server with system information page
+  hosts: my
+  become: yes
+  gather_facts: yes
+
+
+  roles:
+    - apache_status_role
+
+
+  vars:
+    configure_apache: false

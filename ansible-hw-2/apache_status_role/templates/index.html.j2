@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Info: {{ ansible_hostname }}</title>
+</head>
+<body>
+    <h1>System Information</h1>
+    <pre>
+Hostname: {{ ansible_hostname }}
+CPU: {{ ansible_processor[0] if ansible_processor is defined else 'Unknown' }}
+CPU Cores: {{ ansible_processor_cores if ansible_processor_cores is defined else 'Unknown' }}
+RAM: {{ ansible_memtotal_mb }} MB ({{ (ansible_memtotal_mb | int / 1024) | round(1) }} GB)
+First Disk Device: {{ ansible_mounts[0].device if ansible_mounts else 'Unknown' }}
+IP Address: {{ ansible_default_ipv4.address if ansible_default_ipv4 is defined else 'Unknown' }}
+OS: {{ ansible_distribution }} {{ ansible_distribution_version }}
+Kernel: {{ ansible_kernel }}
+
+Generated: {{ ansible_date_time.date }} {{ ansible_date_time.time }}
+    </pre>
+</body>
+</html>
