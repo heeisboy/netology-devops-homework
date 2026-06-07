@@ -1,5 +1,5 @@
 ---
-- name: Изменение MOTD сообщения с указанием в сообщении IP адреса и hostname управляемого хоста
+- name: Edit MOTD message with additional information IP address and hostname
   hosts: my
   become: yes
   vars:
