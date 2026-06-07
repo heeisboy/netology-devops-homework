@@ -42,7 +42,11 @@
 
 **Код плейбука:** <a href="https://github.com/heeisboy/netology-devops-homework/blob/main/ansible-hw-2/playbook-archive.yml">playbook-archive.yml</a>
 
-2. Плейбук устанавливает пакет tuned, запускает его как демон и добавляет в автозагрузку.
+2. Плейбук устанавливает пакет tuned, запускает его как демон и добавляет в автозагрузку. Запускаем командой ```ansible-playbook -i inventory.ini  playbook-archive.yml --vault-password-file .env```
+<img width="1252" height="599" alt="изображение" src="https://github.com/user-attachments/assets/08544953-d67d-4bf7-8673-110918990a69" />
+
+**Код плейбука:** <a href="https://github.com/heeisboy/netology-devops-homework/blob/main/ansible-hw-2/playbook-tuned-demon.yml">playbook-tuned-demon.yml</a>
+
 
 ---
 
