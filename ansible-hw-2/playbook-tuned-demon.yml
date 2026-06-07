@@ -6,12 +6,12 @@
   tasks:
 
     - name: Install tuned demon
-      package: # Означает, что нужно установить пакет tuned
+      package:
         name: tuned
-        state: present # Указывает, что пакет должен быть установлен (present)
+        state: present
 
     - name: Enable and start tuned service
-      systemd: # Модуль для управления системными службами
-        name: tuned # Имя службы, которую нужно управлять
-        enabled: yes # Указывает, что служба должна быть включена при загрузке системы
-        state: started # Указывает, что служба должна быть запущена
+      systemd:
+        name: tuned
+        enabled: yes
+        state: started
