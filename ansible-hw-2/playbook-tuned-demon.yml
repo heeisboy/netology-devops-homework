@@ -1,5 +1,5 @@
 ---
-- name: Install tuned demon and add to systemd
+- name: Install tuned demon
   hosts: my
   become: yes
 
