@@ -47,6 +47,7 @@
 
 **Код плейбука:** <a href="https://github.com/heeisboy/netology-devops-homework/blob/main/ansible-hw-2/playbook-tuned-demon.yml">playbook-tuned-demon.yml</a>
 
+3. Плейбук изменяет приветствие системы (motd) при входе на "..."
 
 ---
 
