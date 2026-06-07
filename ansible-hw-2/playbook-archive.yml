@@ -7,20 +7,20 @@
 
     - name: Create directory for archive
       file:
-        path: "/tmp/kafka"  # Путь к директории, которую нужно создать
-        state: directory  # Указывает, что нужно создать директорию
-        mode: '0755'  # Устанавливает права доступа к директории
+        path: "/tmp/kafka"
+        state: directory
+        mode: '0755'
 
 
     - name: Download archive
-      get_url: # Означает, что мы будем скачивать файл по URL
-        url: "https://www.apache.org/dyn/closer.lua/kafka/4.3.0/kafka_2.13-4.3.0.tgz?action=download"  # URL-адрес, по которому находится архив
-        dest: "/tmp/kafka/kafka_2.13-4.3.0.tgz"  # Путь, куда будет сохранен скачанный файл
+      get_url:
+        url: "https://www.apache.org/dyn/closer.lua/kafka/4.3.0/kafka_2.13-4.3.0.tgz?action=download"
+        dest: "/tmp/kafka/kafka_2.13-4.3.0.tgz"
 
 
     - name: Unarchive the downloaded file
-      unarchive: # Модуль для распаковки архива
-        src: "/tmp/kafka/kafka_2.13-4.3.0.tgz"  # Путь к скачанному архиву
-        dest: "/tmp/kafka"  # Путь, куда будет распакован архив
-        remote_src: yes  # Указывает, что архив уже находится на удаленной машине
-        creates: "/tmp/kafka/kafka_2.13-4.3.0"  # Указывает, что распаковка не будет выполняться, если уже существует распакованная директория
+      unarchive:
+        src: "/tmp/kafka/kafka_2.13-4.3.0.tgz"
+        dest: "/tmp/kafka"
+        remote_src: yes
+        creates: "/tmp/kafka/kafka_2.13-4.3.0"
