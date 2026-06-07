@@ -1,0 +1,28 @@
+---
+- name: Edit MOTD message
+  hosts: my
+  become: yes
+  vars:
+    greeting_message: "Hello, netology! Have a nice session!"
+
+
+  tasks:
+
+    - name: Create MOTD file
+      copy:
+        content: |
+          {{ greeting_message }}
+          Current time: {{ ansible_date_time.time }}
+          Date: {{ ansible_date_time.date }}
+        dest: /etc/motd
+        mode: '0644'
+
+
+    - name: Display MOTD content
+      command: cat /etc/motd
+      register: motd_content
+
+
+    - name: Show MOTD
+      debug:
+        msg: "{{ motd_content.stdout }}"
