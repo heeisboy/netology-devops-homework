@@ -49,9 +49,9 @@
 
 3. Плейбук изменяет приветствие системы (motd) при входе на:
 ```
-"Hello, netology! Have a nice session!
+Hello, netology! Have a nice session!
 Current time: <time>
-Date: <date>"
+Date: <date>
 ```
 Запускаем командой `ansible-playbook -i inventory.ini playbook-edit-motd.yml --vault-password-file .env`
 
@@ -72,11 +72,11 @@ Date: <date>"
 
 Плейбук изменяет приветствие системы (motd) при входе на:
 ```
-"Hello, netology! Have a nice day!
+Hello, netology! Have a nice day!
 Current time: <time>
 Date: <date>
 Hostname: <hostname>
-IP Address: <ip-address>"
+IP Address: <ip-address>
 ```
 Запускаем командой `ansible-playbook -i inventory.ini playbook-modify-motd.yml --vault-password-file.yml .env`
 
