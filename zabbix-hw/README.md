@@ -175,5 +175,19 @@ esac
 
 ## Задание 7. Решение
 
+**Код скрипта на python [ТЫЦ](https://github.com/heeisboy/netology-devops-homework/blob/main/zabbix-hw/script.py)**
 
+**Items**
+<img width="1729" height="318" alt="изображение" src="https://github.com/user-attachments/assets/c266a454-4b70-425c-aa51-30ca8c784ffb" />
 
+**Latest data. Date**
+<img width="1729" height="249" alt="изображение" src="https://github.com/user-attachments/assets/8ff45285-58a5-4f08-a9b9-9efc617a7eae" />
+
+**Latest data. Name**
+<img width="1729" height="249" alt="изображение" src="https://github.com/user-attachments/assets/d2e5bc91-c1e6-4e91-94f6-63cf3286017d" />
+
+**Latest data. Ping**
+<img width="1729" height="249" alt="изображение" src="https://github.com/user-attachments/assets/582bce84-33c5-48a4-98ab-77e11465380a" />
+
+**Latest data. Simple print**
+<img width="1729" height="249" alt="изображение" src="https://github.com/user-attachments/assets/1bd8de7b-1fde-4052-b505-f6089860eb4d" />
