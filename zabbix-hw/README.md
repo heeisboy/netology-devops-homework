@@ -113,4 +113,47 @@
 
 <img width="660" height="391" alt="изображение" src="https://github.com/user-attachments/assets/f8afe33e-c3a0-4f96-8c35-1043ebeff4d4" />
 
+---
+
+## Задание 6* со звёздочкой
+
+Создайте UserParameter на bash и прикрепите его к созданному вами ранее шаблону. Он должен вызывать скрипт, который:
+
+    при получении 1 будет возвращать ваши ФИО,
+    при получении 2 будет возвращать текущую дату.
+
+Требования к результату
+
+    Прикрепите в файл README.md код скрипта, а также скриншот Latest data с результатом работы скрипта на bash, чтобы был виден результат работы скрипта при отправке в него 1 и 2
+
+---
+
+## Задание 6. Решение
+
+**Код скрипта** 
+
+```
+#!/bin/bash
+
+case "$1" in
+	1)
+		echo "Khromov R.D"
+		;;
+	2)
+		date "+%Y-%m-%d %H:%M:%S"
+		;;
+	*)
+		echo "Unknown parameter. Use 1 for FIO, 2 for current date."
+		exit 1
+		;;
+esac
+```
+
+**Latest data. Результат работы скрипта при вызове 1.**
+
+<img width="1729" height="248" alt="изображение" src="https://github.com/user-attachments/assets/acf6ec7d-cd06-453b-b48b-1557ae521aa9" />
+
+**Latest data. Результат работы скрипта при вызове 2.**
+
+<img width="1729" height="248" alt="изображение" src="https://github.com/user-attachments/assets/3d22e7dd-6d9d-48db-ab77-af7fa1d452b3" />
 
