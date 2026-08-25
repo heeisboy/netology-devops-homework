@@ -16,4 +16,4 @@
 **show standby brief**<img width="692" height="197" alt="image" src="https://github.com/user-attachments/assets/77d6bac2-9791-46c3-9713-417a0d9b7b98" />
 **ping во время обрыва**<img width="1035" height="395" alt="image" src="https://github.com/user-attachments/assets/1b5ae18f-5c73-4b53-add8-748a4b13394c" />
 
-Схема: 
+[>>>Схема<<<](https://github.com/heeisboy/netology-devops-homework/blob/main/sflt-homeworks/hsrp_homework.pkt)
