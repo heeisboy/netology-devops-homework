@@ -25,7 +25,7 @@
 *Как мы видим, при обращении к серверу, haproxy балансирует между двумя разными адресами*
 
 
-Конфиг haproxy
+[Конфиг haproxy](https://github.com/heeisboy/netology-devops-homework/blob/main/sflt-homeworks-2/haproxy-1.conf)
 
 ---
 
@@ -57,7 +57,7 @@
 <img width="1848" height="473" alt="image" src="https://github.com/user-attachments/assets/1835a856-8b1b-42d6-9f3c-5c037c9688e7" />
 
 
-Конфиг haproxy
+[Конфиг haproxy](https://github.com/heeisboy/netology-devops-homework/blob/main/sflt-homeworks-2/haproxy-2.conf)
 
 ---
 
