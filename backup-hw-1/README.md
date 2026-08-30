@@ -29,3 +29,4 @@ rsync -avc --delete --exclude='.*/' ~/ /tmp/backup/
 
 ## Решение 
 
+[Скрипт <<<](https://github.com/heeisboy/netology-devops-homework/blob/main/backup-hw-1/crosync.sh)
