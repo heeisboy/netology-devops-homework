@@ -1,0 +1,28 @@
+---
+# Устанавливает и запускает nginx на всех ВМ из inventory.ini
+# (сгенерирован Terraform'ом, см. ../ansible_inventory.tf).
+#
+# Запуск после terraform apply:
+#   cd ansible && ansible-playbook playbook.yml
+
+- name: Install and start nginx
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Update apt cache (Debian/Ubuntu)
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+      when: ansible_facts['os_family'] == "Debian"
+
+    - name: Install nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+    - name: Start and enable nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
