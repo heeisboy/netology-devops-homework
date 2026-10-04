@@ -225,4 +225,7 @@ Flag: virtual_host_metadata, state: enabled
 
 ```
 
+<img width="1135" height="482" alt="изображение" src="https://github.com/user-attachments/assets/52ddc4cc-e614-4be7-9289-f45861c7f894" />
+
+<img width="1135" height="482" alt="изображение" src="https://github.com/user-attachments/assets/98cd3922-47f2-4fb0-b358-3391cfe3de68" />
 
